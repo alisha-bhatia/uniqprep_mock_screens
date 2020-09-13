@@ -1,0 +1,381 @@
+<html lang="en">
+<head>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Reports</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+  <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+<body>
+<style>
+  font-type1
+  {
+    color:black;
+    font-size: 15px;
+    font-weight:light;
+    }
+  font-type2 {
+  color: black;
+  padding: 25px;
+  font-size: 20px;
+  text-align: center;
+  font-weight:light;
+}
+.thumbnail
+{
+ color:black;
+}
+.thumbnail:hover
+{
+  text-decoration:none;
+background-color: white;
+opacity: 0.5;
+color:black;
+}
+
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+/* for toggle behavior */
+
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}
+
+.btn-outline-default
+{
+ background-color: #989898;
+color:white;
+padding:10px;
+border-color: white;
+}
+.btn-outline-default:hover
+{
+ background-color: #D3D3D3;
+ color:white;
+ border-color: white;
+}
+
+
+</style>
+<script>
+ $(function() {
+  // Sidebar toggle behavior
+  $('#sidebarCollapse').on('click', function() {
+    $('#sidebar, #content').toggleClass('active');
+  });
+});
+ 
+</script>
+
+
+
+<body style = "padding:0px; margin:0px ">
+ <!-- Toggle button -->
+   <button id="sidebarCollapse" type="button" class="btn btn-outline-default float-right " style="outline:black;position:absolute;right: 10px; top:20px;" >
+     <i class="fa fa-bars mr-2"></i><small
+     class="text-uppercase font-weight-bold">
+      MORE </small>
+   </button>
+ <!--Header-->
+ 
+ 
+ <div class="jumbotron-fluid text-left" style="margin-bottom:15px;padding: 5px;margin-top:5px;background: white">
+  <a href="uniqprep-adminpanel.html" class="thumbnail">
+      <img src="logo-uPrep.jpg" </img> ADMIN
+  </a>
+ </div>
+ 
+
+ 
+ 
+
+  
+<!-- Page content holder -->
+
+<div class="page-content p-7" id="content">
+  </div>
+  
+  <!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar" >
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center">
+      <div class="media-body align-items-center">
+        <h4 class="m-0 align-items-center">
+         MENU
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0 ">Main</p>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic ">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Test Administration
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic ">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                Student Performance
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Student Set Up
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-user-friends mr-3 text-primary fa-fw"></i>
+                Student By Batch
+      </a>
+    </li>
+  </ul>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Reports</p>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic bg-light">
+               <i class="fa fa-portrait mr-3 text-primary fa-fw""></i>
+                Student Reports
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-portrait mr-3 text-primary fa-fw""></i>
+                Summary Reports
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic">
+                 <i class="fa fa-portrait mr-3 text-primary fa-fw""></i>
+                Test Reports
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- End vertical navbar -->
+
+  
+  
+  
+  
+<div class="jumbotron text-center font-weight-light" style="margin-bottom:15px;padding: 5px;margin-top:0px;background: white;font-size:35px">
+    Student Reports
+</div>
+
+<!--Batch type and Test Code-->
+<div class = "container-fluid font-weight-light" style="border:5px;padding:15px;background-color:#758fc7">
+ <div style="text-align:center">
+  
+ Batch:
+
+  <select class="custom-select custom-select-sm" style="width:160px">
+  <option selected>Batch</option>
+  <option value="1">Mondays 10-11AM </option>
+  <option value="2">Tuesdays 1-2AM</option>
+  <option value="3">Thursdays 5-9pm</option>
+</select>
+
+
+<div style="display:inline;width:200px">
+ <span style="width:100px"> </span>
+ &emsp;
+ &emsp;
+ &emsp;
+ &emsp;
+ &emsp;
+</div>
+
+
+ Test Code: 
+
+  <select class="custom-select custom-select-sm" style="width:120px;"!important>
+   <option selected>Test Code</option>
+   <option value="1">0038</option>
+   <option value="2">2202</option>
+   <option value="3">0098</option>
+  </select>
+
+
+</div>
+</div>
+<!--Mock Table-->
+
+<div class="container-fluid text-center font-weight-light" style= "margin-top:50px;margin-bottom:75px">
+  <table class="table table-bordered table-hover">
+  <thead>
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">First Name </th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Test Date</th>
+      <th scope="col">Test Code</th>
+      <th scope="col">Status</th>
+      <th scope="col">Reading - RAW</th>
+      <th scope="col">Reading - CALC</th>
+      <th scope="col">Writing - RAW</th>
+      <th scope="col">Writing - CALC</th>
+      <th scope="col">Math - RAW</th>
+       <th scope="col">Math - CALC</th>
+      <th scope="col">Total - RAW</th>
+      <th scope="col">Total</th>
+      <th scope="col">Report</th>
+      <th scope="col"> Reset</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="link.com">
+          Mark
+        </a>
+      </td>
+      <td>Otto</td>
+      <td>4/21/2020</td>
+      <td>3343</td>
+      <td>Submitted</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>
+        <a href="link.com">
+          View
+        </a>
+      </td>
+      <td>
+        <a href="link.com">
+          Reset
+        </a>
+      </td>
+      
+    </tr>
+    
+    <tr>
+      <td>
+        <a href="link.com">
+          Alisha
+        </a>
+      </td>
+      <td>Bhatia</td>
+      <td>5/18/2020</td>
+      <td>3227</td>
+      <td>Submitted</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>
+      <a href="link.com">
+          View
+        </a>
+      </td>
+      <td>
+        <a href="link.com">
+          Reset
+        </a>
+      </td>
+    </tr>
+    
+    
+
+    <tr>
+     <td>
+        <a href="link.com">
+          Pooja
+        </a>
+      </td>
+      <td>Gandhi</td>
+      <td>2/28/2020</td>
+      <td>9989</td>
+      <td>Submitted</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>800</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>
+        <a href="link.com">
+          View
+        </a>
+      </td>
+      <td>
+        <a href="link.com">
+          Reset
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
+    </div>
+  </div>
+</div>
+
+
+  
